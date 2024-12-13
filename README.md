@@ -1,4 +1,4 @@
-# Music-Note-Predection
+# Music-Note-Prediction
 
 ## Introduction
 
@@ -9,6 +9,7 @@ have traditionally been performed by humans.
 ## Dataset Attributes
 
 MusicNet Dataset : https://www.kaggle.com/datasets/imsparsh/musicnet-dataset
+
 The dataset comprises a metadata file and CSV files corresponding to individual songs. The attributes are detailed below:
 
 ### Song-Level Attributes (from CSV files)
@@ -89,6 +90,24 @@ The models tested and implemented are as follows:
 - **Softmax Classifier** (for multi-class classification)  
 - **Random Forests**  
 - **MLP Classifier**  
+
+## Results and Performance Metrics
+
+We used five different models to predict notes based on specific feature values: **start time, end time, instrument, start beat, end beat, and note value** from the chosen file (`1788.csv`).  
+Performance metrics such as Accuracy, Precision, Recall, F1-score, and Macro F1-score were calculated to evaluate and compare the models. The following table summarizes these metrics:
+
+| Metric        | Linear Regression | Decision Tree | Softmax Classifier | Random Forest | MLP Classifier |
+|---------------|-------------------|---------------|---------------------|---------------|----------------|
+| **MSE**       | 102.53            | -             | -                   | -             | -              |
+| **MAE**       | 8.15              | -             | -                   | -             | -              |
+| **RMSE**      | 10.13             | -             | -                   | -             | -              |
+| **R Squared** | 0.0781            | -             | -                   | -             | -              |
+| **Accuracy**  | 0.0340            | 0.2996        | 0.0914              | 0.4614        | 0.6492         |
+| **Precision** | 0.0320            | 0.2960        | 0.0863              | 0.4597        | 0.6487         |
+| **Recall**    | 0.0340            | 0.2814        | 0.0914              | 0.4638        | 0.6448         |
+| **F1 Score**  | 0.0202            | 0.2888        | 0.0736              | 0.4604        | 0.6401         |
+| **Macro F1**  | 0.0089            | 0.2858        | 0.0447              | 0.4689        | 0.6354         |
+
 
 
 
